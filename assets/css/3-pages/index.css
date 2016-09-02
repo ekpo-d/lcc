@@ -5,6 +5,7 @@
  */
 /* FONT PATH
  * -------------------------- */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700|Raleway';
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
@@ -12925,7 +12926,7 @@ a {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 p {

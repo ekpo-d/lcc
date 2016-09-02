@@ -1,6 +1,9 @@
 @import "../1-tools/-tools-imports";
 @import "../2-base/-base-imports";
 
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700|Raleway';
+
+
 /* body / generic */
 
 a{
@@ -25,8 +28,8 @@ a{
 .none{
 	display: none;
 }
-h1, h2, h3, h4 {
-	font-family: 'Lato', sans-serif;
+h1, h2, h3, h4{
+	font-family: 'Raleway', sans-serif;
 }
 p{
 	font-family: 'Lato', sans-serif;
