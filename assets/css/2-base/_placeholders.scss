@@ -1,0 +1,35 @@
+$speed : 0.7s;
+$gray: #3f3f3f;
+$lightGray: rgba(0, 0, 0, 0.14902);
+$p-size: 1.3em;
+
+%bigSiteBtn{
+	color: white;
+	font-size: $p-size;
+	background-color: transparent;
+	padding: 15px 50px;
+	border: 2px solid white;
+	transition: $speed;
+}
+%bigSiteBtn:hover{
+	color: black;
+	background-color: white;
+}
+
+%smallSiteBtn{
+	color: black;
+	background-color: transparent;
+	padding: 7px 40px;
+	border: 2px solid $gray;
+	transition: $speed;
+}
+%smallSiteBtn:hover{
+	color: white;
+	background-color: $gray;
+}
+
+%borderAndPad{
+	padding: 20px;
+	border: 2px solid white;
+	border-radius: 20px;
+}
