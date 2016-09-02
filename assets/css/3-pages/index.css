@@ -12924,6 +12924,14 @@ a {
   display: none;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+}
+
 /* end body / generic */
 /* landing */
 #landing {
