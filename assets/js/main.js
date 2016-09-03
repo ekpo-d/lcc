@@ -1,19 +1,20 @@
-
-$(
-
-  // Morphext - for text animations
+$(document).ready(function(){
   $("#js-rotating").Morphext({
-    // The [in] animation type. Refer to Animate.css for a list of available animations.
     animation: "pulse",
-    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
     separator: "|",
-    // The delay between the changing of each phrase in milliseconds.
-    speed: 4000,
-    complete: function () {
-        // Called after the entrance animation is executed.
-        console.log(this.animation)
-    }
+    speed: 4000
   })
 
+  $('button.navbar-toggle').click(function(){
+    $('div#navbar.navbar-collapse').css('display', 'none')
 
-)
+    if ($('nav .hamburger').css('display') === 'none'){
+      $('.navbar-toggle').addClass('active')
+      $('nav .hamburger').slideDown('normal').show()
+    }
+    else{
+      $('nav .hamburger').slideUp('slow')
+      $('.navbar-toggle').removeClass('active')
+    }
+  })
+})

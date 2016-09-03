@@ -12965,24 +12965,32 @@ p {
 
 /* end landing */
 /* location and service times */
-#locations, #media {
+#locations, #media, #contact {
   padding: 50px 10px 30px 10px;
 }
 
-#locations article, #media article {
-  padding: 0 30px;
+#locations .loc, #media .loc, #contact .loc {
+  color: white;
+  padding: 10px 30px;
   transition: 0.7s;
-  border-right: 1px solid rgba(0, 0, 0, 0.14902);
+  height: 250px;
+  background: url(../../images/bg3.png);
+  background-size: cover;
+  background-position: center;
 }
 
-#locations article:last-child, #media article:last-child {
-  border-right: 0;
+#locations .loc p, #media .loc p, #contact .loc p {
+  font-size: 1.3em;
+}
+
+#locations .loc:hover, #media .loc:hover, #contact .loc:hover {
+  cursor: pointer;
 }
 
 /* end location and service times */
 /* ministries and events*/
 #ministries {
-  background: url(../../images/bg2.png) fixed;
+  background: url(../../images/bg3.png) fixed;
   background-size: cover;
   background-position: center;
   color: white;
@@ -12999,7 +13007,7 @@ p {
 }
 
 #events {
-  background: url(../../images/bg3.png) fixed;
+  background: url(../../images/bg2.png) fixed;
   background-size: cover;
   background-position: center;
   color: white;
@@ -13017,13 +13025,29 @@ p {
   font-size: 1.3em;
 }
 
-#events .choice {
-  margin-top: 70%;
-  font-size: 2em;
+#events .buttons {
+  padding: 0;
 }
 
-#events .collage2 {
-  padding-bottom: 40px;
+#events .heading {
+  background: url(../../images/bg3.png) fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin: 0;
+}
+
+#events .heading h4 {
+  font-size: 2.5em;
+}
+
+#events .details {
+  background-color: #3f3f3f;
+}
+
+#events .details p {
+  font-size: 1.3em;
+  padding: 0 20px;
 }
 
 #events .small-b-round .smallWhiteBtn {
@@ -13034,8 +13058,19 @@ p {
 
 /* end ministries and events */
 /* media */
-#media .col-sm-6 {
+#media .col-sm-6, #contact .col-sm-6 {
   padding: 30px;
+}
+
+/* end media */
+/* media */
+#contact h2 {
+  padding: 0 20px;
+}
+
+#contact p {
+  font-size: 1.3em;
+  padding: 0 20px;
 }
 
 /* end media */
@@ -13044,6 +13079,10 @@ p {
   background-color: #3f3f3f;
   color: white;
   padding: 50px 20px;
+}
+
+#footer .first {
+  margin-bottom: 50px;
 }
 
 #footer .b-right {
@@ -13083,6 +13122,9 @@ p {
   #footer .main {
     margin-top: 30px;
   }
+  #footer .first {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -13098,11 +13140,11 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  #locations article, #media article {
+  #locations article, #media article, #contact article {
     border-right: 0;
     margin-bottom: 50px;
   }
-  #locations article:last-child, #media article:last-child {
+  #locations article:last-child, #media article:last-child, #contact article:last-child {
     margin-bottom: 0;
   }
 }
@@ -13152,10 +13194,49 @@ p {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .jumbotron {
+    padding-top: 50px;
+  }
+}
+
 /* end  media queries*/
 /* navbar */
 ul.nav {
   padding-top: 30px;
+}
+
+nav .hamburger {
+  height: 100vh;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(63, 63, 63, 0.9);
+  color: white;
+  z-index: 99;
+}
+
+nav .hamburger .logo-container {
+  margin: 30px 0 0 30px;
+}
+
+nav .hamburger ul {
+  margin: 120px auto;
+  list-style: none;
+  padding-left: 0;
+}
+
+nav .hamburger ul li {
+  color: lightGray;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+nav .hamburger ul li.active {
+  color: white;
 }
 
 .navbar-brand {
@@ -13256,6 +13337,10 @@ ul.nav {
   background-color: #fff;
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   background-color: transparent;
 }
@@ -13265,7 +13350,7 @@ ul.nav {
 }
 
 .navbar-toggle .icon-bar:nth-of-type(3) {
-  top: 2px;
+  top: 3px;
 }
 
 .navbar-toggle .icon-bar {
@@ -13275,7 +13360,7 @@ ul.nav {
 
 .navbar-toggle.active .icon-bar:nth-of-type(1) {
   top: 6px;
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 
 .navbar-toggle.active .icon-bar:nth-of-type(2) {
@@ -13284,5 +13369,11 @@ ul.nav {
 
 .navbar-toggle.active .icon-bar:nth-of-type(3) {
   top: -6px;
-  transform: rotate(-45deg);
+  transform: rotate(90deg);
 }
+
+button.navbar-toggle {
+  z-index: 100;
+}
+
+/* end navbar */

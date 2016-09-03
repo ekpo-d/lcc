@@ -73,13 +73,21 @@ p{
 #locations{
 	padding: 50px 10px 30px 10px;
 
-	article{
-		padding: 0 30px;
+	.loc{
+		color: white;
+		padding: 10px 30px;
 		transition: $speed;
-		border-right: 1px solid $lightGray;
+		height: 250px;
+		background: url(../../images/bg3.png);
+		background-size: cover;
+		background-position: center;
 
-	&:last-child{
-		border-right: 0;
+		p{
+			font-size: $p-size;
+		}
+
+		&:hover{
+			cursor: pointer;
 		}
 	}
 
@@ -90,7 +98,7 @@ p{
 /* ministries and events*/
 
 #ministries{
-	background: url(../../images/bg2.png) fixed;
+	background: url(../../images/bg3.png) fixed;
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -106,7 +114,7 @@ p{
 }
 
 #events{
-	background: url(../../images/bg3.png) fixed;
+	background: url(../../images/bg2.png) fixed;
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -120,12 +128,26 @@ p{
 			font-size: $p-size;
 		}
 	}
-	.choice{
-		margin-top: 70%;
-		font-size: 2em;
+	.buttons{
+		padding: 0;
 	}
-	.collage2{
-		padding-bottom: 40px;
+	.heading{
+			background: url(../../images/bg3.png) fixed;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			margin: 0;
+
+			h4{
+				font-size: 2.5em;
+			}
+	}
+	.details{
+		background-color: $gray;
+		p{
+			font-size: $p-size;
+			padding: 0 20px;
+		}
 	}
 	.small-b-round{
 
@@ -150,12 +172,28 @@ p{
 }
 /* end media */
 
+/* media */
+#contact{
+	@extend #media;
+	h2{
+		padding: 0 20px;
+	}
+	p{
+		font-size: $p-size;
+		padding: 0 20px;
+	}
+}
+/* end media */
+
 /* footer */
 #footer{
 	background-color: $gray;
 	color: white;
 	padding: 50px 20px;
 
+	.first{
+		margin-bottom: 50px
+	}
 	.b-right{
 		border-right: 1px solid gray;
 	}
@@ -193,8 +231,13 @@ p{
 #ministries .right{
 	margin-right: 0;
 }
-#footer .main{
-	margin-top: 30px;
+#footer {
+	.main{
+		margin-top: 30px;
+	}
+	.first{
+		margin-bottom: 0;
+	}
 }
 }
 @media screen and (min-width: 426px)
@@ -267,6 +310,7 @@ p{
 }
 @media screen and (min-width: 1280px){
 	.jumbotron{
+		padding-top: 50px;
 	}
 }
 
@@ -275,6 +319,37 @@ p{
 /* navbar */
 ul.nav{
 	padding-top: 30px;
+}
+nav .hamburger{
+	height: 100vh;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(63, 63, 63, 0.9);;
+	color: white;
+	z-index: 99;
+
+	.logo-container{
+		margin: 30px 0 0 30px;
+	}
+
+	ul{
+		margin: 120px auto;
+		list-style: none;
+		padding-left: 0;
+
+		li{
+			color: lightGray;
+			margin-bottom: 40px;
+			font-size: 1.5em;
+			text-align: center;
+		}
+		li.active{
+			color: white;
+		}
+	}
 }
 .navbar-brand{
 	padding-top: 30px;
@@ -362,7 +437,9 @@ li.dropdown {
 .navbar-default .navbar-toggle .icon-bar {
  background-color: #fff;
 }
-
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
 	background-color: transparent;
 }
@@ -370,7 +447,7 @@ li.dropdown {
 	  top: 1px;
 }
 .navbar-toggle .icon-bar:nth-of-type(3) {
-  	top: 2px;
+  	top: 3px;
 }
 .navbar-toggle .icon-bar {
 	  position: relative;
@@ -378,12 +455,16 @@ li.dropdown {
 }
 .navbar-toggle.active .icon-bar:nth-of-type(1) {
 	  top: 6px;
-	  transform: rotate(45deg);
+	  transform: rotate(90deg);
 }
 .navbar-toggle.active .icon-bar:nth-of-type(2) {
 	  background-color: transparent;
 }
 .navbar-toggle.active .icon-bar:nth-of-type(3) {
 	  top: -6px;
-	  transform: rotate(-45deg);
+	  transform: rotate(90deg);
 }
+button.navbar-toggle{
+	z-index: 100;
+}
+/* end navbar */
