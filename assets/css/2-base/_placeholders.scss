@@ -5,6 +5,10 @@ $p-size: 1.3em;
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700|Raleway';
 
+body{
+	font-family: 'Lato', sans-serif;
+}
+
 %bigSiteBtn{
 	color: white;
 	font-size: $p-size;
@@ -152,7 +156,8 @@ $p-size: 1.3em;
 	}
 	}
 	@media screen and (max-width: 768px){
-					#locations article{
+					#locations {
+					article{
 						border-right: 0;
 						margin-bottom: 50px;
 
@@ -163,11 +168,13 @@ $p-size: 1.3em;
 					#bishop .right{
 						margin-right: 0;
 					}
+					}
 				}
 	@media screen and (min-width: 768px){
 		.jumbotron{
 			padding-top: 20px;
 		}
+
 	}
 	@media screen and (min-width: 769px)
 				and (max-width: 1023px){
@@ -235,17 +242,21 @@ $p-size: 1.3em;
 		}
 
 		ul{
-			margin: 120px auto;
+			margin: 100px auto;
 			list-style: none;
 			padding-left: 0;
 
 			li{
 				color: lightGray;
-				margin-bottom: 40px;
+				margin-bottom: 25px;
 				font-size: 1.5em;
 				text-align: center;
 			}
-			li.active{
+			a{
+				color: #d2d2d2;
+				text-decoration: none;
+			}
+			a.active{
 				color: white;
 			}
 		}
@@ -297,6 +308,10 @@ $p-size: 1.3em;
 
 	li.dropdown {
 	    display: inline-block;
+	}
+	li a.active{
+		color: black;
+		background-color: white;
 	}
 
 	.dropdown-content {
@@ -367,4 +382,18 @@ $p-size: 1.3em;
 		z-index: 100;
 	}
 	/* end navbar */
+}
+%map{
+		width: 100%;
+		height: 400px;
+}
+@mixin backgroundImageFixed($image){
+	background: url('../images/' + $image + '.png') fixed;
+	background-size: cover;
+	background-position: center;
+}
+@mixin backgroundImage($image){
+	background: url('../images/' + $image + '.png');
+	background-size: cover;
+	background-position: center;
 }

@@ -1,0 +1,48 @@
+
+#audioPage{
+
+/* landing */
+#landingAboutPage{
+	@include backgroundImageFixed(bg);
+	.jumbotron{
+		@extend %jumbotron
+	}
+
+}
+
+#locations{
+	padding: 30px 10px;
+
+	.loc{
+		color: white;
+		padding: 10px 30px;
+		transition: $speed;
+		height: 250px;
+		@include backgroundImage(bg2);
+
+		p{
+			font-size: $p-size;
+		}
+
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.all{
+		height: 520px;
+	}
+	@media screen and (max-height: 1280px){
+	.all{
+		margin-top: 20px;
+		height: 250px;
+	}
+}
+}
+
+/* end landing */
+/* footer */
+#footer{
+	@extend %footer;
+}
+/* end footer */
+}

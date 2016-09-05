@@ -1,13 +1,12 @@
-#aboutPage{
+#LatestPage{
 
 /* landing */
 #landingAboutPage{
 	@include backgroundImageFixed(bg);
 
-	.jumbotron{
-		@extend %jumbotron
-	}
-
+.jumbotron{
+	@extend %jumbotron
+}
 }
 
 #purpose, #beliefs{
@@ -21,7 +20,7 @@
 		padding: 0 30px;
 		margin-top: 20px;
 	}
-	.col-sm-6{
+	.col-sm-6, .col-sm-4{
 		margin-top: 50px;
 		margin-bottom: 0;
 	}
@@ -32,7 +31,7 @@
 
 /* bishop */
 
-#bishop{
+#image{
 	@include backgroundImageFixed(bg3);
 	color: white;
 
@@ -43,9 +42,17 @@
 	}
 	p{
 		font-size: $p-size;
+		padding: 20px;
 	}
 }
 /* end bishop */
+
+/* map*/
+#googleMap{
+	@extend %map;
+}
+/* map*/
+
 /* footer */
 #footer{
 	@extend %footer;

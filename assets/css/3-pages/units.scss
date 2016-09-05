@@ -1,13 +1,12 @@
-#aboutPage{
+#unitsPage{
 
 /* landing */
 #landingAboutPage{
 	@include backgroundImageFixed(bg);
 
-	.jumbotron{
-		@extend %jumbotron
-	}
-
+.jumbotron{
+	@extend %jumbotron
+}
 }
 
 #purpose, #beliefs{
@@ -46,6 +45,7 @@
 	}
 }
 /* end bishop */
+
 /* footer */
 #footer{
 	@extend %footer;
